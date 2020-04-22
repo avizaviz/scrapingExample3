@@ -1,0 +1,19 @@
+{
+  "name": "scrapingExample3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^3.0.0"
+  },
+  "devDependencies": {
+    "@google-cloud/functions-framework": "^1.5.1"
+  },
+  "scripts": {
+    "deploy": "gcloud functions deploy scrapingExample3 --trigger-http --runtime nodejs10 --memory 1024MB",
+    "start": "functions start && functions deploy --source=. scrapingExample3 --trigger-http",
+    "localStart": "functions-framework --target=scrapingExample"
+  },
+  "author": "",
+  "license": "ISC"
+}
